@@ -1,0 +1,9 @@
+version: "3"
+services:
+  toogoodtogo-watcher:
+    image: marklagendijk/toogoodtogo-watcher
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Amsterdam
+    volumes:
+      - ./toogoodtogo-watcher:/home/node/.config/toogoodtogo-watcher-nodejs
